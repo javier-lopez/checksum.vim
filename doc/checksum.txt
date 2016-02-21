@@ -1,0 +1,94 @@
+*checksum.txt*   Vim global plugin to cryptographically checksum files
+
+==============================================================================
+CONTENTS                                                     *Checksum-contents*
+
+    1. Usage ........................... |ChecksumUsage|
+    2. Configuration ................... |ChecksumConfig|
+    3. License ......................... |ChecksumLicense|
+    4. Bugs ............................ |ChecksumBugs|
+    5. Contributing .................... |ChecksumContributing|
+    6. Changelog ....................... |ChecksumChangelog|
+
+==============================================================================
+USAGE                                                            *ChecksumUsage*
+
+    :Checksum
+
+After pressing <Enter>, a checksum (md5 by default) will be generated for the
+current file. It can also be invoked in visual mode to checksum a selection.
+
+Alternatively the '<Leader>c' mapping can be used, which can be overrided by
+configuring the 'g:checksum_map' variable in the .vimrc file.
+
+==============================================================================
+CONFIGURATION                                                   *ChecksumConfig*
+
+These options should be set in the .vimrc file.
+
+g:checksum_cmd                                              *ChecksumConfig-cmd*
+    User defined checksum command
+
+    Use this option to customize the checksum application >
+        let g:checksum_cmd = 'sha512sum'
+        let g:checksum_cmd = 'openssl sha512 | awk "{print \$NF}"'
+<
+
+g:checksum_clipboard                                  *ChecksumConfig-clipboard*
+    Default clipboard
+
+    Acceptable Values: "none", "vim", "external", "all". >
+        let g:checksum_clipboard = 'all'
+<
+    none:     result will only be shown in the status line
+    vim:      result will only be copied to the integrated vim clipboard
+              (unnamed register, ")
+    external: result will only be copied to external clipboard utilities
+              (currently xclip, xsel, pbcopy)
+    all:      result will be copied to all possible clipboards
+
+g:checksum_clipboard_cmd                          *ChecksumConfig-clipboard-cmd*
+    User defined clipboard
+
+    Use this option to configure any other third party clipboard application >
+        let g:checksum_clipboard_cmd = 'clipboard_app --option'
+<
+
+g:checksum_map                                              *ChecksumConfig-map*
+    Use this option to configure the default mapping >
+        let g:checksum_map = '<Leader>c'
+<
+
+    Alternatively the mapping can be assigned directly to the <Plug> action >
+        map <Leader>c <Plug>Checksum
+<
+    NOTE: The mapping is available in normal mode to checksum the entire buffer
+    and in visual mode to evalue the visual selection.
+==============================================================================
+LICENSE                                                        *ChecksumLicense*
+
+WTFPL, Do What the Fuck You Want to Public License. - http://www.wtfpl.net/
+
+==============================================================================
+BUGS                                                              *ChecksumBugs*
+
+If you find a bug please post it on the issue tracker:
+
+    https://github.com/chilicuil/vim-checksum/issues
+
+==============================================================================
+CONTRIBUTING                                              *ChecksumContributing*
+
+I created this plugin while cooking lentils, it does what I need, if you need
+something else the best way to get it is to send a patch.
+
+GitHub: http://github.com/chilicuil/checksum-vim/
+
+==============================================================================
+CHANGELOG                                                    *ChecksumChangelog*
+
+v0.0.1
+    * Initial release.
+
+==============================================================================
+" vim: ft=help
