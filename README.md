@@ -50,7 +50,7 @@ Usage
 
 :Checksum (or <kbd>\<Leader\>c</kbd>) to calculate the checksum of the current file, you may use it in visual mode to checksum only the selection.
 
-By default checksum.vim uses md5sum to calculate a md5 checksum, however it can customized to use any hash algorithm
+By default checksum.vim uses <kbd>md5sum</kbd> to calculate a md5 checksum, however it can customized to use any hash algorithm
 
     let g:checksum_cmd = 'sha1sum'
     let g:checksum_cmd = 'openssl sha512 | awk "{print \$NF}"
@@ -62,4 +62,4 @@ License
 
 I don't understand the desire in humans to own everything, including non touchable abstract objects, however some persons may require this software to be licensed and therefore.
 
-© 2016 WTFPL, Do What the Fuck You Want to Public License. - http://www.wtfpl.net/
+WTFPL, Do What the Fuck You Want to Public License. - http://www.wtfpl.net/
