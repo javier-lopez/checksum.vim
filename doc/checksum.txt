@@ -5,10 +5,9 @@ CONTENTS                                                     *Checksum-contents*
 
     1. Usage ........................... |ChecksumUsage|
     2. Configuration ................... |ChecksumConfig|
-    3. License ......................... |ChecksumLicense|
-    4. Bugs ............................ |ChecksumBugs|
-    5. Contributing .................... |ChecksumContributing|
-    6. Changelog ....................... |ChecksumChangelog|
+    3. Bugs ............................ |ChecksumBugs|
+    4. Contributing .................... |ChecksumContributing|
+    5. Changelog ....................... |ChecksumChangelog|
 
 ==============================================================================
 USAGE                                                            *ChecksumUsage*
@@ -64,10 +63,6 @@ g:checksum_map                                              *ChecksumConfig-map*
 <
     NOTE: The mapping is available in normal mode to checksum the entire buffer
     and in visual mode to evalue the visual selection.
-==============================================================================
-LICENSE                                                        *ChecksumLicense*
-
-WTFPL, Do What the Fuck You Want to Public License. - http://www.wtfpl.net/
 
 ==============================================================================
 BUGS                                                              *ChecksumBugs*
