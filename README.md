@@ -56,10 +56,3 @@ By default checksum.vim uses <kbd>md5sum</kbd> to calculate a md5 checksum, howe
     let g:checksum_cmd = 'openssl sha512 | awk "{print \$NF}"
 
 See <kbd>:h checksum.txt</kbd> for more help.
-
-License
--------
-
-I don't understand the desire in humans to own everything, including non touchable abstract objects, however some persons may require this software to be licensed and therefore.
-
-WTFPL, Do What the Fuck You Want to Public License. - http://www.wtfpl.net/
