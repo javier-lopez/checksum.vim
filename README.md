@@ -1,4 +1,4 @@
-[Checksum.vim](https://github.com/chilicuil/vim-checksum) is a global plugin to [cryptographically hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) files or strings.
+[Checksum.vim](https://github.com/chilicuil/checksum.vim) is a global plugin to [cryptographically hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) files or strings.
 
 Preview
 -------
@@ -18,7 +18,7 @@ Installation
 
 - [Vundle](https://github.com/chilicuil/vundle) way (recommended), add the following to your `$HOME/.vimrc` file:
 
-        Bundle 'chilicuil/vim-checksum'
+        Bundle 'chilicuil/checksum.vim'
 
     And run inside of vim:
 
@@ -26,7 +26,7 @@ Installation
 
 - [NeoBundle](https://github.com/Shougo/neobundle.vim) way:
 
-        NeoBundle 'chilicuil/vim-checksum'
+        NeoBundle 'chilicuil/checksum.vim'
 
     And run inside of vim:
 
@@ -34,12 +34,12 @@ Installation
 
 - [Pathogen](https://github.com/tpope/vim-pathogen) way:
 
-        $ git clone https://github.com/chilicuil/vim-checksum.git ~/.vim/bundle/vim-checksum
+        $ git clone https://github.com/chilicuil/checksum.vim.git ~/.vim/bundle/checksum.vim
 
 - **Manual** (simplest if you've never heard of vim plugin managers), download the zip file generated from github and extract it to `$HOME/.vim`
 
-        $ mv vim-checksum*.zip $HOME/.vim
-        $ cd $HOME/.vim && unzip vim-checksum*.zip
+        $ mv checksum.vim*.zip $HOME/.vim
+        $ cd $HOME/.vim && unzip checksum.vim*.zip
 
     Update the help tags from vim:
 
