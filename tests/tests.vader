@@ -1,0 +1,91 @@
+Given(Lorem ipsum input):
+  Duis bibendum neque nec justo tincidunt euismod.
+
+Execute(Checksum on the whole file):
+  redir => messages
+    Checksum
+  redir END
+
+  let lastmsg = get(split(messages, "\n"), -1, "") | Log lastmsg
+  AssertEqual 'Checksum: 4ee0cd7592572a0e9ea05e1ad20cb5bb', lastmsg
+
+Do(Verification of the Checksum clipboard none option):
+  :call setreg('"', '')\<Enter>
+  :let g:checksum_clipboard = 'none'\<Enter>
+  :let g:checksum_clipboard = 'none'\<Enter>
+  :Checksum\<Enter>
+  o\<Esc>
+  p
+
+Expect(Lorem ipsum):
+  Duis bibendum neque nec justo tincidunt euismod.
+  
+
+Do(Verification of the Checksum in the clipboard):
+  :let g:checksum_clipboard = 'all'\<Enter>
+  :Checksum\<Enter>
+  o\<Esc>
+  p
+
+Expect(Lorem ipsum + clipboard output):
+  Duis bibendum neque nec justo tincidunt euismod.
+  4ee0cd7592572a0e9ea05e1ad20cb5bb
+
+Do(Checksum 2nd visual line):
+  yyp
+  :2,2Checksum\<Enter>
+  o\<Esc>
+  p
+  :Checksum\<Enter>
+  o\<Esc>
+  p
+
+Expect(Visual checksum output on 2nd line):
+  Duis bibendum neque nec justo tincidunt euismod.
+  Duis bibendum neque nec justo tincidunt euismod.
+  4ee0cd7592572a0e9ea05e1ad20cb5bb
+  97f63ddad4025954211cb6eb89bb5839
+
+#vader doesn't seems to update '>/'< (visual marks)
+#so in order to use checksum#GetVisualSelection
+#they're declared below, also, setpos() on #'>/'<
+#is only supported in vim >= 7.3.590, so the
+#following test fails in ubuntu precise and below.
+Do(Checksum 2 words visual selection):
+  yyp
+  :call setpos("'<", [0,1,1,0])\<Enter>
+  :call setpos("'>", [0,1,13,0])\<Enter>
+  :1,1Checksum\<Enter>
+  o\<Esc>
+  p
+
+Expect(Lorem ipsum + 2 word clipboard output):
+  Duis bibendum neque nec justo tincidunt euismod.
+  Duis bibendum neque nec justo tincidunt euismod.
+  0a280ebf38a2cfa495f170ccb4402511
+
+#ends vim >= 7.3.590 test
+
+Execute(Test sha1sum as checksum generator):
+  let g:checksum_cmd = 'sha1sum'
+
+  redir => messages
+    Checksum
+  redir END
+
+  let lastmsg = get(split(messages, "\n"), -1, "") | Log lastmsg
+  AssertEqual 'Checksum: eb3b74f310f38cf06560391f3173895581584c14', lastmsg
+
+Execute(Test openssl sha512 as checksum generator):
+  let g:checksum_cmd = 'openssl sha512 | awk "{print \$NF}"'
+
+  redir => messages
+    Checksum
+  redir END
+
+  let lastmsg = get(split(messages, "\n"), -1, "") | Log lastmsg
+  AssertEqual 'Checksum: 79450d0424f617f91b1bbdcea498b416a8634bc73a4c3b76f646dd5b72f3e321a1100d03acaf5ee3a95d8bdc24f9d178ef0b6f98b22a468a9d78140b91d605a1', lastmsg
+
+#############################
+# vim: set ts=4 sw=2 tw=0 ft=
+#############################

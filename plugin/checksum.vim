@@ -2,7 +2,6 @@
 " File:        checksum.vim
 " Description: vim global plugin to cryptographically checksum files
 " Maintainer:  Javier Lopez <m@javier.io>
-" License:     WTFPL
 " ============================================================================
 
 " Init {{{1
@@ -15,12 +14,6 @@ if v:version < '700'
   echoerr "checksum unavailable: requires Vim 7.0+"
   finish
 endif
-
-"moved to checksum#Calculate()
-"if !executable('md5sum') && !executable('openssl')
-  "echoerr "checksum: requires either md5sum or openssl"
-  "finish
-"endif
 
 " Default configuration {{{1
 if exists('g:checksum_clipboard')

@@ -1,7 +1,9 @@
-[Checksum.vim](https://github.com/chilicuil/checksum.vim) is a global plugin to [cryptographically hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) files or strings.
+About
+-----
 
-Preview
--------
+[![Build Status](https://travis-ci.org/chilicuil/checksum.vim.png?branch=master)](https://travis-ci.org/chilicuil/checksum.vim)
+
+[Checksum.vim](https://github.com/chilicuil/checksum.vim) is a global plugin to [cryptographically hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) files or strings.
 
 <p align="center">
   <img src="http://javier.io/assets/img/vim-checksum.gif"/><br>

@@ -2,7 +2,6 @@
 " File:        checksum.vim
 " Description: vim global plugin to cryptographically checksum files
 " Maintainer:  Javier Lopez <m@javier.io>
-" License:     WTFPL
 " ============================================================================
 
 function! checksum#CopyToClipboard(clip) "{{{
@@ -64,7 +63,7 @@ function! checksum#Calculate(line1, line2)  "{{{
         redraw | echohl WarningMsg|echomsg 'Error: unable to calculate the checksum using' . g:checksum_cmd | echohl None
   else
       call checksum#CopyToClipboard(l:checksum)
-      redraw | echomsg 'Done: ' . l:checksum
+      redraw | echomsg 'Checksum: ' . l:checksum
       "echo buffer | echo a:line1 | echo a:line2 "help debugging
   endif
 endfunction
