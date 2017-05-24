@@ -1,9 +1,9 @@
 About
 -----
 
-[![Build Status](https://travis-ci.org/chilicuil/checksum.vim.png?branch=master)](https://travis-ci.org/chilicuil/checksum.vim)
+[![Build Status](https://travis-ci.org/javier-lopez/checksum.vim.png?branch=master)](https://travis-ci.org/javier-lopez/checksum.vim)
 
-[Checksum.vim](https://github.com/chilicuil/checksum.vim) is a global plugin to [cryptographically hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) files or strings.
+[Checksum.vim](https://github.com/javier-lopez/checksum.vim) is a global plugin to [cryptographically hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function) files or strings.
 
 <p align="center">
   <img src="http://javier.io/assets/img/vim-checksum.gif"/><br>
@@ -18,9 +18,9 @@ Requirements
 Installation
 ------------
 
-- [Vundle](https://github.com/chilicuil/vundle) way (recommended), add the following to your `$HOME/.vimrc` file:
+- [Vundle](https://github.com/javier-lopez/vundle) way (recommended), add the following to your `$HOME/.vimrc` file:
 
-        Bundle 'chilicuil/checksum.vim'
+        Bundle 'javier-lopez/checksum.vim'
 
     And run inside of vim:
 
@@ -28,7 +28,7 @@ Installation
 
 - [NeoBundle](https://github.com/Shougo/neobundle.vim) way:
 
-        NeoBundle 'chilicuil/checksum.vim'
+        NeoBundle 'javier-lopez/checksum.vim'
 
     And run inside of vim:
 
@@ -36,7 +36,7 @@ Installation
 
 - [Pathogen](https://github.com/tpope/vim-pathogen) way:
 
-        $ git clone https://github.com/chilicuil/checksum.vim.git ~/.vim/bundle/checksum.vim
+        $ git clone https://github.com/javier-lopez/checksum.vim.git ~/.vim/bundle/checksum.vim
 
 - **Manual** (simplest if you've never heard of vim plugin managers), download the zip file generated from github and extract it to `$HOME/.vim`
 

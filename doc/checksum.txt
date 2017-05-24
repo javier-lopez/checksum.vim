@@ -69,7 +69,7 @@ BUGS                                                              *ChecksumBugs*
 
 If you find a bug please post it on the issue tracker:
 
-    https://github.com/chilicuil/checksum.vim/issues
+    https://github.com/javier-lopez/checksum.vim/issues
 
 ==============================================================================
 CONTRIBUTING                                              *ChecksumContributing*
@@ -77,7 +77,7 @@ CONTRIBUTING                                              *ChecksumContributing*
 I created this plugin while cooking lentils, it does what I need, if you need
 something else the best way to get it is to send a patch.
 
-GitHub: http://github.com/chilicuil/checksum.vim
+GitHub: http://github.com/javier-lopez/checksum.vim
 
 ==============================================================================
 CHANGELOG                                                    *ChecksumChangelog*
